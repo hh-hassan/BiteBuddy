@@ -1,0 +1,1049 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
+    background-color: white;
+}
+
+.logo {
+    width:60px;
+    height:60px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    padding-left: 40px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.item img {
+    width:20px;
+    height:20px;
+    padding-right: 10px;
+}
+
+.SVG {
+    width:20px;
+    height:20px;
+    fill: white;
+    stroke: black;
+    stroke-width: 2;
+    padding-right: 10px;
+}
+
+.svg-text {
+    font-size: 22px;
+}
+
+.item div {
+    padding: 2px 0px;
+}
+
+.item div sup {
+    color: #ffa700;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.item:hover .SVG {
+  stroke: #ff5200;
+}
+
+.item:hover div {
+    color: #ff5200;
+}
+
+.body {
+    margin: 0px 170px;
+    margin-bottom: 100px;
+}
+
+.section {
+    margin: 40px 0px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #f6f5f5;
+}
+
+.desc1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.desc2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.food-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.food-container img {
+    width:144px;
+    height:180px;
+}
+
+.food-container::-webkit-scrollbar {
+    display: none;
+}
+
+.shimmer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.shimmer-card {
+    margin-bottom: 70px;
+}
+
+.box {
+    width:250px;
+    height:250px;
+    background-color: #d9d9da;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.s1 {
+    width:150px;
+    height:10px;
+    background-color: #d9d9da;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.s2 {
+    width:125px;
+    height: 10px;
+    background-color: #d9d9da;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.filterButton {
+    background-color: white;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 20px / 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.scrollButton {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(217, 215, 215);
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.restChains {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.restChains::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-status {
+    margin: 0px auto;
+    margin-top: 10px;
+    width: 50px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #efefef;
+    position: relative;
+}
+
+.indicator {
+    height: 100%;
+    width: 7px;
+    background-color: red;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.restContainer1 {
+    width: 250px;
+    margin: 0px 10px;
+    cursor: pointer; 
+}
+
+.restContainer1:hover {
+    transform: scale(0.9);
+}
+
+.image1 {
+    position: relative;
+    width:250px;
+    height:250px;
+}
+
+.image1 img {
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.overlay-text div {
+    padding-left: 10px;
+    padding-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restName {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rating {
+    display: flex;
+    padding: 3px 0px;
+}
+
+.rating img {
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
+}
+
+.rating span {
+    font-size: 17px;
+    padding-left: 5px;
+}
+
+.cuisine {
+    font-size: 17px;
+    color: #666;
+}
+
+.cuisine div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.restContainer2 {
+    width: 200px;
+    margin: 0px 10px;
+    margin-top: 30px;
+    cursor: pointer; 
+}
+
+.restContainer2:hover {
+    transform: scale(0.9);
+}
+
+.image2 {
+    position: relative;
+    width:200px;
+    height:200px;
+}
+
+.image2 img {
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #f6f5f5;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.cuisines {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.cuisines div {
+    font-size: 16px;
+    border: 1px solid rgb(222, 221, 221);
+    border-width: 1.5px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.explore {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.explore div {
+    font-size: 16px;
+    border: 1px solid rgb(222, 221, 221);
+    border-width: 1.5px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.part1 {
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(240, 240, 245);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 60px;
+}
+
+.part1 div {
+    padding-top: 17px;
+}
+
+.part1 img {
+    width:202px;
+    height:64px;
+    cursor: pointer;
+}
+
+.part2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: #a7a7a7;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.part2 img {
+    width:45px;
+    height:47px;
+}
+
+.part2 ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 20px;
+}
+
+.part2 li{
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.last {
+    display: flex;
+}
+
+.swiggy {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+.searchPage {
+    margin: 50px 170px;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.search input {
+    font-size: 16px;
+    width: 300px;
+    height:28px;
+    margin: 0px 10px;
+    outline: none;
+    border: none;
+}
+
+.search button {
+    background-color: white;
+    border: none;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+.search img {
+    width:20px;
+    height:20px;
+}
+
+.restaurantDetails {
+    margin: 80px 250px;
+}
+
+.detailBox {
+    border: 1px grey;
+    margin: 50px 0px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow:
+        0px 10px 10px 5px rgba(106, 137, 179, 0.3),
+        10px 0px 10px 5px rgba(106, 137, 179, 0.3),
+        -10px 0px 10px 5px rgba(106, 137, 179, 0.3);
+}
+
+.detailBox div {
+    
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.detailBox div span {
+    margin: 0px 5px;
+}
+
+.detailBox hr {
+    border: none;
+    height: 1px;
+    background-color: #dbdada;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.delivery {
+    height:20px;
+    width: 20px;
+    padding-right: 5px;
+}
+
+.sec {
+    margin: 20px 0px;
+    padding: 5px;
+}
+
+.secHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.off {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.off::-webkit-scrollbar {
+    display: none;
+}
+    
+.offerCard {
+    display: flex;
+    align-items: center;
+    width: 302px;
+    height: 48px;
+    padding: 10px;
+    margin: 15px 0px;
+    margin-right: 30px;
+    border: 1px solid rgb(205, 204, 204);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.offerCard img {
+    width: 48px;
+    height: 48px;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+.grey {
+    color: grey;
+    padding-top: 5px;
+}
+
+.carSec {
+    border-bottom: 15px solid rgb(245, 245, 245);
+}
+
+.carSecHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    margin: 15px;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.car {
+    position: relative;
+}
+
+.carousel img {
+    width: 260px;
+    height: 265px;
+    margin: 6px;
+}
+
+.carouselInfo {
+    position: absolute;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    width:230px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carouselADD {
+    color: rgb(27, 166, 114);
+    background-color: white;
+    font-size: 17px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(208, 207, 207);
+    cursor: pointer;
+}
+
+.carouselADD:hover {
+    background-color: rgb(216, 215, 215);
+}
+
+.menu {
+    display: flex;
+    justify-content:center;
+    margin: 20px 0px;
+}
+
+.menu img {
+    width: 100px;
+    height: 50px;
+}
+
+.cat {
+    margin: 10px 0px;
+    border-bottom: 15px solid rgb(245, 245, 245);
+    padding: 15px;
+}
+
+.menuList div:last-child {
+    border-bottom: none;
+}
+
+.catHeader {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.catHeader img {
+    width: 17px;
+    height: 17px;
+}
+
+.combo {
+    margin: 10px 0px;
+    border-bottom: 15px solid rgb(245, 245, 245);
+}
+
+.com {
+    margin: 10px 0px;
+    border-bottom: 5px solid rgb(245, 245, 245);
+    padding: 15px;
+}
+
+.comHeader {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.comHeader img {
+    width: 17px;
+    height: 17px;
+}
+
+.itemCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 2px solid rgb(245, 245, 245);
+}
+
+.itemDetails div {
+    padding: 5px 0;
+}
+
+.itemDetails div span {
+    padding-right: 5px;
+}
+
+.itemName {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.green {
+    color: rgb(10, 127, 10);
+    font-weight: bold;
+}
+
+.itemImage {
+    position: relative;
+    margin: 10px 0px;
+}
+
+.itemImage img {
+    height: 144px;
+    width: 156px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.initButton {
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 90px;
+    color: rgb(27, 166, 114);
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(208, 207, 207);
+    cursor: pointer;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.initButton:hover {
+    background-color: rgb(216, 215, 215);
+}
+
+.laterButton {
+    position: absolute;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 90px;
+    color: rgb(27, 166, 114);
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(208, 207, 207);
+    cursor: pointer;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dummyDiv {
+    display: none;
+}
+
+.custom {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    color:#929191;
+}
+
+.bestsellerComp {
+    position: relative;
+    margin: 10px 0px;
+}
+
+.bestseller {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    top: 0;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0efef;
+}
+
+.otherDetails {
+    width: 70%;
+    height: 500px;
+    background-color: white;
+    margin: 30px 0px;
+    margin-left: 40px;
+}
+
+.orderDetails {
+    width: 20%;
+    height: 500px;
+    margin: 30px;
+    background-color: white;
+}
+
+.help {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    background-color: #37718e;
+}
+
+.helpHeader {
+    color: white;
+    padding: 55px 30px;
+    padding-bottom: 30px;
+}
+
+.helpHeader div {
+    padding: 3px 0px;
+}
+
+.helpBody {
+    position: relative;
+    left: 20px;
+    width: 90.5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 50px;
+}
+
+.titles {
+    width: 22%;
+    background-color: #edf1f7;
+    font-size: 16px;
+    padding: 20px;
+    padding-right: 0px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.title {
+    padding: 25px 0px;
+    padding-left: 60px;
+    color: black;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.title.selected {
+    background-color: white;
+    color: black;
+}
+
+.FAQs {
+    width: 72%;
+}
+
+.FAQs div:last-child {
+    border-bottom: none;
+}
+
+.question {
+    padding: 30px 0px;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.qn {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.qn img {
+    width: 17px;
+    height: 17px;
+}
+
+.qn:hover {
+    color: #ff5200;
+}
+
+.description {
+    margin-top: 30px;
+    white-space: pre-line;
+    color:#707070;
+    font-size: 15px;
+}
+
+.link {
+    margin-top: 30px;
+}
+
+.link a {
+    text-decoration: none;
+    color: #ff5200;
+    font-weight: bold;
+}
+
+.link a:hover {
+    color: #ff0000;
+}
+
+.email {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.email a {
+    text-decoration: none;
+    color: #ff5200;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid #ff5200;
+}
+
+.email a:hover {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+.waitTime {
+    font-size: 11px;
+    color:#979696;
+}
+
+.locHeader {
+    cursor: pointer;
+}
+
+.locSec {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: left 0.3s ease-in-out;
+    z-index: 2000;
+}
+
+.dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+.location {
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.main-content {
+    transition: filter 0.3s ease-in-out;
+}
+
+.main-content.inactive {
+    pointer-events: none;
+    user-select: none;
+}
+
+.cross {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.locationInput {
+    width: 85%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid rgb(205, 204, 204);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.location input {
+    width: 100%;
+    height: 30px;
+    caret-color: #ff5200;
+    border: none;
+}
+
+.location input:focus {
+    outline: none;
+}
+
+.location input::placeholder {
+    font-weight: bold;
+    color: #bababa;
+}
+
+.GPSlocation {
+    display: flex;
+    width: 85%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid rgb(205, 204, 204);
+    align-items: center;
+    cursor: pointer;
+}
+
+.smallText {
+    margin-top: 7px;
+    color: #acacac;
+    font-size: 13px;
+}
+
+.GPSlocation img {
+    width: 50px;
+    height: 50px;
+    margin: 0px 20px;
+}
+
+.locCard {
+    display: flex;
+    width: 85%;
+    margin: 20px auto;
+    padding: 10px;
+    border-bottom: 1px dashed black;
+    align-items: center;
+    cursor: pointer;
+}
+
+.locCard img {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+}
+
+.locationUnserviceable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.locationUnserviceable img {
+    width: 238px;
+    height: 238px;
+    margin: 20px;
+}
+
+.locationUnserviceable div {
+    margin: 10px;
+}
+
+.greyColor {
+    color: #6b6b6b;
+    font-size: 18px;
+}
