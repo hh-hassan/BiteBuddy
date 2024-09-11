@@ -1,4 +1,4 @@
-18117
+18118
 138C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\yaml\browser\dist\compose\compose-scalar.js133697398464398217 0
 143C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\strip-ansi-cjs\node_modules\ansi-regex\readme.md133697398456766236 0
 122C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\js-yaml\dist\js-yaml.min.js133684800308014842 0
@@ -82,7 +82,7 @@
 116C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\requires-port\test.js133699944987694029 0
 141C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\regenerate-unicode-properties\Script\Common.js133699933534795914 0
 115C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\parse5\dist\index.js133699945046642522 0
-104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.0641b553.js133704319371630508 0
+104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.0641b553.js133705088433544061 0
 154C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\regenerate-unicode-properties\Script_Extensions\Tifinagh.js133699933579243876 0
 118C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\weak-lru-cache\index.js133684800284223675 0
 130C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@testing-library\dom\dist\events.js133699930993316464 0
@@ -167,7 +167,7 @@
 129C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\cosmiconfig\dist\ExplorerSync.d.ts133684800341694968 0
 110C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\ws\package.json133699945026201367 0
 135C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\caniuse-lite\data\features\indexeddb2.js133684800423392450 0
-86C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist133704319371935357 1
+86C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist133705088436072656 1
 112C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\nanoid\non-secure133697398463898059 1
 133C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\sucrase\dist\parser\tokenizer\types.js133697398485620921 0
 127C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\css-tree\cjs\parser\sequence.cjs133684800389395208 0
@@ -246,7 +246,7 @@
 149C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\core\test\fixtures\targets-default-distdir-one133684800403738971 1
 123C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\transformer-svg\test133684800291273581 1
 146C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\jest-runtime\node_modules\brace-expansion\README.md133699931999308950 0
-92C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\styles.css133704319361211603 0
+92C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\styles.css133705088342751915 0
 115C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\lodash\_getHolder.js133700810180701124 0
 135C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@babel\runtime\helpers\setPrototypeOf.js133699931005756372 0
 157C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\posthtml\node_modules\posthtml-parser\dist\location-tracker.js133684800287168581 0
@@ -14417,7 +14417,7 @@
 138C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\body-parser\node_modules\debug\src\debug.js133701990471122917 0
 118C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\body-parser\lib\read.js133701990465321521 0
 116C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\body-parser\lib\types133701990466130611 1
-104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\down.2203d422.png133704319370837221 0
+104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\down.2203d422.png133705088433600183 0
 130C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\body-parser\lib\types\urlencoded.js133701990466217054 0
 135C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\binary-extensions\binary-extensions.json133697398420078718 0
 123C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\binary-extensions\index.d.ts133697398420654475 0
@@ -16188,7 +16188,7 @@
 167C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\convertTransform.js133684800315592342 0
 131C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@bcoe\v8-coverage\src\lib\compare.ts133699932092196564 0
 161C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\mergePaths.js133684800326180020 0
-104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\help.bde5bc54.jpg133704319370824708 0
+104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\help.bde5bc54.jpg133705088433600183 0
 160C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\prefixIds.js133684800335014134 0
 129C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\core\lib\CommittedAsset.js133684800343022771 0
 165C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeComments.js133684800335886716 0
@@ -16228,7 +16228,7 @@
 135C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@babel\runtime\helpers\writeOnlyError.js133699931006550487 0
 156C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\api\index.js133684800283086142 0
 144C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\dist133684800316712612 1
-102C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\up.3de39252.png133704319365938018 0
+102C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\up.3de39252.png133705088434306311 0
 143C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib133684800341721738 1
 147C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\LICENSE133684800281440127 0
 152C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\package.json133684800343347396 0
@@ -16327,7 +16327,7 @@
 170C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\common\adopt-buffer.js133684800283524480 0
 174C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\common\OffsetToLocation.js133684800386324155 0
 169C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\common\SyntaxError.js133684800389755693 0
-106C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\signIn.8fbbd06b.jpg133704319366048880 0
+106C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\signIn.8fbbd06b.jpg133705088435637598 0
 157C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\data\index.js133684800354119215 0
 155C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\README.md133684800317374200 0
 169C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\attributes.d.ts.map133684800306243344 0
@@ -18109,10 +18109,11 @@
 115C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\coverage\lcov-report\prettify.css133701210686550616 0
 114C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\coverage\lcov-report\prettify.js133701210686612001 0
 112C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\coverage\lcov-report\sorter.js133701210686201111 0
-108C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\lunchbox.23cef0af.jpg133704319365926436 0
-105C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\offer.2135c3e7.jpg133704319366155555 0
-105C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.1303bb05.css133704319367509357 0
-109C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.1303bb05.css.map133704319367789544 0
-106C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\search.a75fc18c.jpg133704319370837221 0
-104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\star.f9080d0c.jpg133704319370850897 0
-108C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.0641b553.js.map133704319371902217 0
+92C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\.gitignore133704454461079687 0
+106C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\search.a75fc18c.jpg133705088433600183 0
+104C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\star.f9080d0c.jpg133705088433600183 0
+105C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.1303bb05.css133705088434286387 0
+108C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\lunchbox.23cef0af.jpg133705088434306311 0
+105C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\offer.2135c3e7.jpg133705088434306311 0
+108C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.0641b553.js.map133705088434880107 0
+109C:\Users\HASSANUL HAQUE\OneDrive - iitkgp.ac.in\Desktop\IIT KGP\WebD\simpleSwiggy\dist\index.1303bb05.css.map133705088435575891 0
