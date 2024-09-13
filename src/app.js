@@ -1,9 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-
 import { Provider } from "react-redux";
-import appStore from "./utils/appStore";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -13,9 +11,10 @@ import Help from "./components/Help";
 import Cart from "./components/Cart";
 import Error from "./components/Error";
 import RestaurantDetails from "./components/RestaurantDetails";
-
 import Location from "./components/Location";
+import Login from "./components/Login";
 
+import appStore from "./utils/appStore";
 import useOnlineStatus from "./utils/useOnlineStatus";
 import UserContext from "./utils/UserContext";
 
@@ -31,29 +30,28 @@ const AppLayout = () => {
         lng: 77.1025,
     });
     const [place, setplace] = useState("Delhi, India");
+    const [isloginSection, setisloginSection] = useState(false);
 
     if(!useOnlineStatus()) return (<div><h1>Looks like you're offline..Please check your internet connection...</h1></div>);
 
     useEffect(() => {
-        if (islocationSection) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
-        }
+        
+        if (islocationSection || isloginSection) document.body.classList.add('no-scroll');
+        else document.body.classList.remove('no-scroll');
 
-        return () => {
-            document.body.classList.remove('no-scroll');
-        };
-    }, [islocationSection]);
+        return () => document.body.classList.remove('no-scroll');
+
+    }, [islocationSection, isloginSection]);
     
     return (
 
         <Provider store={appStore}>
-            <UserContext.Provider value={{ place, setplace, coordinates, setcoordinates, islocationSection, setlocationSection }}>
+
+            <UserContext.Provider value={{ place, setplace, coordinates, setcoordinates, islocationSection, setlocationSection, isloginSection, setisloginSection }}>
                 
                 <div className="app">
                     
-                    <div className={`main-content ${islocationSection ? 'inactive' : ''}`}>
+                    <div className={`main-content ${(islocationSection || isloginSection) ? 'inactive' : ''}`}>
                         <Header />
                         <Outlet />
                         <Footer />
@@ -62,9 +60,18 @@ const AppLayout = () => {
                     {
                         islocationSection &&
                         
-                            <div className="locSec">
+                            <div className="overlaySec">
                                 <div className="dim-overlay" onClick={() => setlocationSection(!islocationSection)}></div>
                                 <Location />
+                            </div>                 
+                    }
+
+                    {
+                        isloginSection &&
+                        
+                            <div className="overlaySec">
+                                <div className="dim-overlay" onClick={() => setisloginSection(!isloginSection)}></div>
+                                <Login />
                             </div>                 
                     }
 

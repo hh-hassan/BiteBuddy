@@ -12,12 +12,10 @@ import help from "../../images/icons/help.jpg";
 import signIn from "../../images/icons/signIn.jpg";
 
 const Header = () => {
-    
-    const [isLoggedIn, setisLoggedIn] = useState(false);
 
     const navigate = useNavigate();
 
-    const { place, islocationSection, setlocationSection} = useContext(UserContext);
+    const { place, islocationSection, setlocationSection, isloginSection, setisloginSection} = useContext(UserContext);
 
     const cartItems = useSelector(store => store.cart.items);
 
@@ -60,8 +58,8 @@ const Header = () => {
                         <div>Help</div>
                 </div>
                 
-                <div className="item" onClick = {() => {setisLoggedIn(!isLoggedIn)}}>
-                    <img src={signIn}/> {isLoggedIn? <div>Sign In</div> : <div>Sign Out</div>}
+                <div className="item" onClick = {() => setisloginSection(!isloginSection)}>
+                    <img src={signIn}/> {isloginSection? <div>Sign Out</div> : <div>Sign In</div>}
                 </div>
                 
                 <div className="item"

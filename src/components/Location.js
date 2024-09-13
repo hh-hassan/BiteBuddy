@@ -60,9 +60,7 @@ const Location = () => {
     
     <div className="location">
 
-        <div>
-            <img className="cross" src={CROSS_ICON} onClick={() => {setlocationSection(!islocationSection)}}></img>
-        </div>
+        <img className="cross" src={CROSS_ICON} onClick={() => {setlocationSection(!islocationSection)}}></img>
         
         <div className="locationInput">
             <input
