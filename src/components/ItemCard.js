@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addItem, removeItem } from "../utils/cartSlice";
 import { CDN_URL, BESTSELLER_LOGO_URL } from "../utils/constants";
