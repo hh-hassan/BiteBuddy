@@ -14,10 +14,8 @@ const useData = ({lat, lng}) => {
         const json = await data.json();
         setdata(json);
     };
-
-    console.log(data);
     
     return data;
 };
 
-export default useData
+export default useData;
