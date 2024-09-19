@@ -40,9 +40,6 @@ const Search = () => {
             </div>
 
             {/* <div className="restChains">{filteredList.map(rest => <RestaurantCard1 key={rest.info.id} props={rest}/>)}</div> */}
-            
-            {/* <Location /> */}
-
 
         </div>  
     );
