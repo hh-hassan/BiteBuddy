@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from 'react-router-dom';
 
 import UserContext from "../utils/UserContext";
-import { LOGO_URL, CART_PATH } from "../utils/constants";
+import { LOGO_URL, LOC_ICON_PATH, CART_PATH } from "../utils/constants";
 
 import lunchbox from "../../images/icons/lunchbox.jpg";
 import search from "../../images/icons/search.jpg";
@@ -15,11 +15,12 @@ const Header = () => {
 
     const navigate = useNavigate();
 
-    const { place, islocationSection, setlocationSection, isloginSection, setisloginSection} = useContext(UserContext);
+    const { place, islocationSection, setlocationSection, isloginSection, setisloginSection } = useContext(UserContext);
 
     const cartItems = useSelector(store => store.cart.items);
 
     return (
+        
         <div className="header">
             
             <div>
@@ -29,7 +30,17 @@ const Header = () => {
             </div>
 
             <div className="locHeader" onClick={() => {setlocationSection(!islocationSection)}}>
-                {place.replace(/(\b\w+\b)(, \1)+/g, '$1')}
+                
+                <svg viewBox="0 0 100 100" fill="#EF4444">
+                    <path d={LOC_ICON_PATH}></path>
+                </svg>
+                
+                <span>{place.replace(/(\b\w+\b)(, \1)+/g, '$1')}</span>
+
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="red">
+                    <path d="M7 10l5 5 5-5H7z" />
+                </svg>
+
             </div>
 
             <div className="nav-bar">
@@ -67,7 +78,7 @@ const Header = () => {
 
                         <svg className="SVG" viewBox="-1 0 37 32">
                             <path d={CART_PATH} />
-                            <text x="50%" y="50%" text-anchor="middle" dy=".3em" className="svg-text">{cartItems.length}</text>
+                            <text x="50%" y="50%" textAnchor="middle" dy=".3em" className="svg-text">{cartItems.length}</text>
                         </svg>
 
                         <div>Cart</div>

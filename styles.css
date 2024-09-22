@@ -911,7 +911,19 @@ hr {
 }
 
 .locHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
+    padding: 0px 5px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.locHeader svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 
 .overlaySec {

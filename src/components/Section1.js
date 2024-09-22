@@ -15,7 +15,6 @@ const Section1 = ({props}) => {
         
             <div className="desc1">
                 {props?.data?.cards[0]?.card?.card?.header?.title}
-                {console.log(props.data.cards[0].card)}
 
                 <div>
 

@@ -2,8 +2,6 @@ import { CDN_URL } from "../utils/constants";
 
 const OfferCard = ({props}) => {
     
-    console.log(props);
-    
     const {
         header,
         couponCode,

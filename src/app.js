@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
-import Help from "./components/Help";
 import Cart from "./components/Cart";
 import Error from "./components/Error";
 import RestaurantDetails from "./components/RestaurantDetails";
@@ -19,8 +18,7 @@ import useOnlineStatus from "./utils/useOnlineStatus";
 import UserContext from "./utils/UserContext";
 
 /* chunking, code splitting, dynamic bundling, lazy Loading, on demand loading, dynamic import */
-
-// const Instamart = lazy(() => import(""));
+const Help = lazy(() => import('./components/Help'));
 
 const AppLayout = () => {
     
@@ -32,7 +30,7 @@ const AppLayout = () => {
     const [place, setplace] = useState("Delhi, India");
     const [isloginSection, setisloginSection] = useState(false);
 
-    if(!useOnlineStatus()) return (<div><h1>Looks like you're offline..Please check your internet connection...</h1></div>);
+    if(!useOnlineStatus()) return <div><h1>Looks like you're offline..Please check your internet connection...</h1></div>;
 
     useEffect(() => {
         
@@ -80,7 +78,7 @@ const AppLayout = () => {
             </UserContext.Provider> 
         </Provider>
     );
-} 
+};
 
 const appRouter = createBrowserRouter([
     
@@ -103,7 +101,11 @@ const appRouter = createBrowserRouter([
 
             {
                 path: "/support", 
-                element: <Help/>
+                element: (
+                    <Suspense fallback={<h1>Support section is loading..Please wait for a while</h1>}>
+                        <Help />
+                    </Suspense>
+                )
             },
 
             {
@@ -123,15 +125,6 @@ const appRouter = createBrowserRouter([
     // {
     //     path: "/about-us", 
     //     element: <AboutUs/>
-    // },
-
-    // {
-    //     path: "/instamart",
-    //     element: (
-    //         <Suspense fallback={<h1>Instamart coad is loading..Please wait for a while</h1>}>
-    //             <Instamart />
-    //         </Suspense>
-    //     )
     // },
 
 ]);

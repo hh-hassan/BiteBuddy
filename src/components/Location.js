@@ -10,7 +10,51 @@ const Location = () => {
   const [error, setError] = useState(null);
   const [debouncedAddress, setDebouncedAddress] = useState(address);
 
-  const { islocationSection, setlocationSection} = useContext(UserContext);
+  const { setplace, setcoordinates, islocationSection, setlocationSection} = useContext(UserContext);
+
+  const getcurrentplace = async (lat, lng) => {
+    
+    const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${lat},${lng}&key=${GEOCODING_API_KEY}`;
+
+    const response = await fetch(apiUrl);
+
+    if (response.ok) {
+      const data = await response.json();
+      const{ suburb, state_district } = data.results[0].components;
+      setplace(`${suburb}, ${state_district}`);
+    }
+
+    else
+      setplace("Current location");
+  }
+
+  const getcurrentLocation = () => {
+    
+    if (navigator.geolocation) 
+    {
+      navigator.geolocation.getCurrentPosition(
+        
+        (position) => {
+
+            setcoordinates({
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            });
+
+            getcurrentplace(position.coords.latitude, position.coords.longitude).catch((error) => {
+              setplace("Current location");
+            });
+
+            setlocationSection(!islocationSection);
+          },
+            
+        (error) => setError(error.message)
+      );
+    } 
+    
+    else
+      setError("Geolocation is not supported by this browser.");
+  };
 
   useEffect(() => {
 
@@ -23,37 +67,39 @@ const Location = () => {
     };
   }, [address]);
 
-  const fetchGeocode = async (debouncedAddress) => {
-
-    if (!debouncedAddress) return;
-
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(address)}&key=${GEOCODING_API_KEY}&countrycode=in&no_annotations=1&limit=100`;
+  useEffect(() => {
     
-    const response = await fetch(url);
+    const fetchGeocode = async (debouncedAddress) => {
 
-    if (response.ok) {
+      if (!debouncedAddress) return;
 
-      const data = await response.json();
+      const url = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(address)}&key=${GEOCODING_API_KEY}&countrycode=in&no_annotations=1&limit=100`;
       
-      if (data.results && data.results.length > 0) {
-        setLocation(data.results);
-        setError(null);
+      const response = await fetch(url);
+
+      if (response.ok) {
+
+        const data = await response.json();
+        
+        if (data.results && data.results.length > 0) {
+          setLocation(data.results);
+          setError(null);
+        } 
+        
+        else {
+          setLocation(null);
+          setError('No results found');
+        }
       } 
       
       else {
         setLocation(null);
-        setError('No results found');
+        setError('Error fetching geocode');
       }
-    } 
+    };
     
-    else {
-      setLocation(null);
-      setError('Error fetching geocode');
-    }
-  };
-
-  useEffect(() => {
     fetchGeocode(debouncedAddress);
+
   }, [debouncedAddress]);
 
   return (
@@ -67,16 +113,18 @@ const Location = () => {
                 type="text"
                 placeholder="Search for area, street name..."
                 value={address}
-                onChange={(e) => setAddress(e.target.value)} // Trigger input change
+                onChange={(e) => setAddress(e.target.value)}
             />
         </div>
 
-        <div className="GPSlocation">
+        <div className="GPSlocation" onClick={getcurrentLocation}>
+            
             <img src={GPS_ICON}></img>
             <div>
                 <div>Get current location</div>
                 <div className="smallText">Using GPS</div>
             </div>
+
         </div>
 
         {location && location.map(l => (<LocationCard props={l} />))}

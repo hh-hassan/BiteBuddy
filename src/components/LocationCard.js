@@ -30,10 +30,6 @@ const LocationCard = ({props}) => {
                 <div>{first}</div>
                 <div className="smallText">{last}</div>
             </div>
-            
-
-            {/* <div>{props.geometry.lat}</div>
-            <div>{props.geometry.lng}</div> */}
 
         </div>
     )

@@ -2,8 +2,6 @@ import up from "../../images/icons/up.png";
 import down from "../../images/icons/down.png";
 
 const Question = ({props, showORnot, setshowAns}) => {
-    
-    console.log(props);
 
     const {
         title,
