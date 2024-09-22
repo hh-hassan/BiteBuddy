@@ -1,10 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
-import { addItem, removeItem } from "../utils/cartSlice";
+import { useParams } from 'react-router-dom';
+import { addResId, addItem, removeItem, clearCart } from "../utils/cartSlice";
 import { CDN_URL, BESTSELLER_LOGO_URL } from "../utils/constants";
 import star from "../../images/icons/star.jpg";
 
 const ItemCard = ({props}) => {
 
+    const { resId } = useParams();
+    
     const {
         name,
         price, defaultPrice,
@@ -14,14 +17,24 @@ const ItemCard = ({props}) => {
 
     } = props?.card?.info;
 
-    const count = useSelector(store => 
-        store.cart.items.filter(item => item === props).length
-    );
+    const storeId = useSelector(store => store.cart.resId);
+
+    const count = useSelector(store => {
+        const foundItem = store.cart.items.find(item => item.card.info.id === props.card.info.id);
+        return foundItem ? foundItem.count : 0;
+    });
 
     const dispatch = useDispatch();
 
     const add = () => {
-        dispatch(addItem(props));
+        
+        if(storeId !== null && storeId !== resId)
+            dispatch(clearCart(resId));
+        
+        if(storeId === null)
+            dispatch(addResId(resId));
+
+        dispatch(addItem(props));  
     };
 
     const sub = () => {

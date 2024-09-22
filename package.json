@@ -1,7 +1,7 @@
 {
   "name": "simpleswiggy",
   "version": "1.0.0",
-  "main": "app.js",
+
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -30,6 +30,7 @@
     "@reduxjs/toolkit": "^2.2.7",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "firebase": "^10.13.2",
     "node-fetch": "^3.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
