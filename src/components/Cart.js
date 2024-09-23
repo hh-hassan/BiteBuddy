@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
+import { loadStripe } from '@stripe/stripe-js';
 import { addItem, removeItem } from "../utils/cartSlice";
+import { STRIPE_PUBLISHABLE_KEY } from "../utils/constants";
 
 const Cart = () => {
     
@@ -7,19 +9,46 @@ const Cart = () => {
 
     const dispatch = useDispatch();
 
-    const add = (item) => {
-        dispatch(addItem(item));  
-    };
-
-    const sub = (item) => {
-        dispatch(removeItem(item));
-    };
-
-    const totalAmount = cartItems.reduce((total, item) => {
+    const itemAmount = cartItems.reduce((total, item) => {
         return total + (item.count * (item.card.info.price/100 || item.card.info.defaultPrice/100));
     }, 0);
 
+    const handleCheckout = async () => {
+    
+        const stripe = await loadStripe(STRIPE_PUBLISHABLE_KEY);
+    
+        const response = await fetch('http://localhost:4000/create-checkout-session', {
+          
+            method: 'POST',
+          
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            
+            body: JSON.stringify({
+                items: cartItems.map(item => ({
+                    name: item.card.info.name,
+                    price: (item.card.info.price / 100) || (item.card.info.defaultPrice / 100),
+                    quantity: item.count
+                }))
+            }),
+        });
+    
+        const session = await response.json();
+    
+        const result = await stripe.redirectToCheckout({
+          sessionId: session.id,
+        });
+    
+        if (result.error) {
+          console.error(result.error.message);
+        }
+    };
+
+    const GST = Number((0.05 * itemAmount).toFixed(2));
+
     return (
+        
         <div className="cart">
 
             <div className="otherDetails">
@@ -44,9 +73,9 @@ const Cart = () => {
                             </div>
                         
                             <div className="cartButton">
-                                    <div onClick={() => sub(item)}>-</div>
+                                    <div onClick={() => dispatch(removeItem(item))}>-</div>
                                     <div>{item.count}</div>
-                                    <div onClick={() => add(item)}>+</div>
+                                    <div onClick={() => dispatch(addItem(item))}>+</div>
                             </div>
 
                             <div>₹{(item.count) * (item.card.info.price/100 || item.card.info.defaultPrice/100)}</div> 
@@ -62,7 +91,7 @@ const Cart = () => {
 
                         <div className="pricebox">
                             <div>Item total</div>
-                            <div>₹{totalAmount}</div>
+                            <div>₹{Number(itemAmount).toFixed(2)}</div>
                         </div>
 
                         <div className="pricebox">
@@ -72,7 +101,7 @@ const Cart = () => {
 
                         <div className="pricebox">
                             <div>GST</div>
-                            <div>₹{0.05 * totalAmount}</div>
+                            <div>₹{GST}</div>
                         </div>
 
                     </div>
@@ -81,11 +110,10 @@ const Cart = () => {
                 
                 <div className="toPay">
                     <div>TO PAY</div>
-                    {/* {console.log()} */}
-                    <div>₹{totalAmount + 6 + (0.05 * totalAmount)}</div>
+                    <div>₹{itemAmount + 6 + GST}</div>
                 </div>
 
-                <div className="proceed">
+                <div className="proceed" onClick={handleCheckout}>
                     Proceed to Pay
                 </div>
 

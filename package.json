@@ -1,7 +1,6 @@
 {
   "name": "simpleswiggy",
   "version": "1.0.0",
-
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -28,6 +27,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
+    "@stripe/stripe-js": "^4.5.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "firebase": "^10.13.2",
@@ -35,6 +35,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
-    "react-router-dom": "^6.26.1"
+    "react-router-dom": "^6.26.1",
+    "stripe": "^16.12.0"
   }
 }
