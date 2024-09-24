@@ -16,8 +16,8 @@ const Cart = () => {
     const handleCheckout = async () => {
     
         const stripe = await loadStripe(STRIPE_PUBLISHABLE_KEY);
-    
-        const response = await fetch('http://localhost:4000/create-checkout-session', {
+        
+        const response = await fetch('https://us-central1-bitebuddy-2693a.cloudfunctions.net/api/create-checkout-session', {
           
             method: 'POST',
           
