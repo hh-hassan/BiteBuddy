@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import { useState, useEffect, useRef, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import UserContext from "../utils/UserContext";
 
 import Shimmer from "./Shimmer";
-import OfferCard from "./OfferCard";
 import OfferCardClass from "./OfferCardClass";
 import CarouselCard from "./CarouselCard";
 import CategoryCard from "./CategoryCard";
@@ -111,14 +110,9 @@ const RestaurantDetails = () => {
                 </div>
                 
                 <div className="off" ref={scrollRef}>
-
-                    {/* function-based component */}
-                    {/* {offerList.map(off => <OfferCard key={off.info.offerIds[0]} props={off}/>)} */}
-                    
-                    {/* class-based component */}
                     {offerList.map(off => <OfferCardClass props={off}/>)}
-                
                 </div>
+                
             </div>
 
             <div className="menu">
