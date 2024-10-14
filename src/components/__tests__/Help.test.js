@@ -31,4 +31,3 @@ describe("Contact Us Page Test Case", () => {
         expect(heading).toBeInTheDocument();
     });
 });
-
