@@ -8,7 +8,7 @@ export const CDN_URL =
     "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/";
 
 export const SERVER_URL =
-    "http://localhost:4000/api/";
+    "https://us-central1-bitebuddy-2693a.cloudfunctions.net/api/";
 
 export const MAIN_DATA_URL =
     "https://www.swiggy.com/dapi/restaurants/list/v5?";

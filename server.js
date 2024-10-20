@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use(express.json());
 
-app.get('/api/restaurants', async (req, res) => {
+app.get('/restaurants', async (req, res) => {
     
     const { lat, lng } = req.query;
 
