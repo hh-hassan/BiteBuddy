@@ -15,19 +15,18 @@ app.use(express.json());
 
 app.post('/api/restaurants', async (req, res) => {
     
-    const { body } = req; // Incoming request body
+    const { body } = req;
 
     const fetchOptions = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Cookie': req.headers.cookie || '', // Forward cookies from the client
+            'Cookie': req.headers.cookie || '',
         },
         body: JSON.stringify(body),
-        credentials: 'include', // Ensure cookies are included in the request
+        credentials: 'include',
     };
 
-    // Forward the request to Swiggy's API
     const swiggyResponse = await fetch('https://www.swiggy.com/dapi/restaurants/list/update', fetchOptions);
     const responseBody = await swiggyResponse.json();
     res.status(swiggyResponse.status).json(responseBody);

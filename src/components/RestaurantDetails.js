@@ -9,7 +9,7 @@ import CategoryCard from "./CategoryCard";
 import CombosCard from "./CombosCard";
 
 import star from "../../images/icons/star.jpg";
-import { MENU_URL } from "../utils/constants";
+import { SERVER_URL } from "../utils/constants";
 import { MENU_LOGO_URL } from "../utils/constants";
 
 const RestaurantDetails = () => {
@@ -29,9 +29,8 @@ const RestaurantDetails = () => {
     const { coordinates } = useContext(UserContext);
 
     const fetchData = async () => {
-        const data = await fetch(MENU_URL + "lat=" + coordinates.lat + "&lng=" + coordinates.lng + "&restaurantId=" + resId);
-        const json = await data?.json();
-
+        const response = await fetch(SERVER_URL + `menu?lat=${coordinates.lat}&lng=${coordinates.lng}&restaurantId=${resId}`);
+        const json = await response.json();
         setdetails(json?.data);
     };
 

@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import { HELP_URL } from "../utils/constants";
+import { SERVER_URL } from "../utils/constants";
 import TitleDescription from "./TitleDescription";
 import Shimmer from "./Shimmer";
 
@@ -13,10 +13,8 @@ const Help = () => {
     }, []);
 
     const fetchData = async () => {
-        
-        const data = await fetch(HELP_URL);
-        const json = await data?.json();
-
+        const response = await fetch(SERVER_URL + `support`);
+        const json = await response.json();
         setdetails(json?.data);
         setsec(json?.data?.issueTypes?.data[0]);
     };
@@ -34,8 +32,6 @@ const Help = () => {
     
     return (
         <div className="help">
-
-            {/* <h1>ASD</h1> */}
 
             <div className="helpHeader">
                 <div><h1>Help & Support</h1></div>

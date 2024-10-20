@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import Question from "./Question";
 import Shimmer from "./Shimmer";
-import { HELP_URL } from "../utils/constants";
+import { SERVER_URL } from "../utils/constants";
 
 const TitleDescription = ({props}) => {
     
@@ -19,10 +19,8 @@ const TitleDescription = ({props}) => {
     }, []);
 
     const fetchData = async () => {
-        
-        const data = await fetch(HELP_URL + "/issues/" + type);
-        const json = await data?.json();
-
+        const response = await fetch( SERVER_URL + `support/issues/${type}` );
+        const json = await response.json();
         setdetails(json?.data);
     };
 
