@@ -10,20 +10,11 @@ export const CDN_URL =
 export const SERVER_URL =
     "https://us-central1-bitebuddy-2693a.cloudfunctions.net/api/";
 
-export const MAIN_DATA_URL =
-    "https://www.swiggy.com/dapi/restaurants/list/v5?";
-
-export const MENU_URL =
-    "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&";
-
 export const MENU_LOGO_URL =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCLrMSr2qHjY_Q4gCnDSaRzL4eNfQf5Q9mHQ&s";
 
 export const BESTSELLER_LOGO_URL =
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV9yjCSnDgb-AaQqRy7aTAptuzqygTG_DLQ&s";
-
-export const HELP_URL =
-    "https://www.swiggy.com/dapi/support";
 
 export const LOC_ICON_PATH =
     "M87.13 0a2.386 2.386 0 0 0-.64.088a2.386 2.386 0 0 0-.883.463L11.34 62.373a2.386 2.386 0 0 0 1.619 4.219l37.959-1.479l17.697 33.614a2.386 2.386 0 0 0 4.465-.707L89.486 2.79A2.386 2.386 0 0 0 87.131 0z";
